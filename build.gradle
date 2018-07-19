@@ -1,0 +1,34 @@
+
+buildscript {
+
+    repositories {
+        mavenCentral()
+        jcenter()
+
+    }
+    dependencies {
+        classpath 'org.unbroken-dome.gradle-plugins:gradle-testsets-plugin:1.0.2'
+        //classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.0.0"
+
+
+    }
+}
+
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin: 'org.unbroken-dome.test-sets'
+//apply plugin: 'maven'
+
+
+repositories {
+    mavenCentral()
+}
+
+
+group = 'ianmorgan.github.io'
+
+dependencies {
+
+    testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
+
+}
